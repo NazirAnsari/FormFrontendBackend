@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="investwell-logo.jpg" alt="iMAGE" style="height: 50px;">
+        <btn>
+            <div class="inlineC">
+                <button>Home</button>
+            </div>
+            <div class="inlineC">
+                <button>Contact Us</button>
+            </div>
+            <div class="inlineC">
+                <button>About Us</button>
+            </div>
+
+            <div class="inlineC">
+                <button id="signIn">Login </button>
+                <button id="reg">Sign Up</button>
+            </div>
+        </btn>
+
+        </div>
+    </header>
+
+    <!-- signup page -->
+    <div class="container" id="registration-form">
+        <h1>Registration Form</h1>
+        <form action="" class="formStyle" onsubmit="submitForm()" name="my-form" method="post
+        ">
+            <div class="divStyle" id="yourName"><label for="name">
+                    <input type="text" name="name" placeholder="Enter your Name" required> <b><span
+                            class="Eroor"></span> </b>
+                </label></div>
+            <div class="divStyle" id="yourEmail"><label for="email">
+                    <input type="email" name="email" placeholder="Enter your Email" required><b><span
+                            class="Eroor"></span> </b>
+                </label></div>
+
+            <div class="divStyle" id="yourPassword">
+                <label for="password">
+                    <input type="password" name="password" placeholder="Enter your password" required><b><span
+                            class="Eroor"></span> </b>
+                </label>
+            </div>
+
+            <div class="divStyle" id="yourCpassword">
+                <label for="cpassword">
+                    <input type="password" name="cpassword" placeholder="Enter once more your password"
+                        required><b><span class="Eroor"></span> </b>
+                </label>
+            </div>
+
+            <div class="divStyle">
+                <button type="signUp" id="signUp">signUp</button>
+                <button type="showData" id="showdata">show Data</button>
+                <!-- <button type="signUp" onclick="dataInsert();">signUp</button> -->
+
+            </div>
+        </form>
+    </div>
+
+    <!-- loginpage -->
+    <div class="container">
+        <form id="myblock" style="display:none" action="" class="formStyle" onsubmit="submitForm()" name="my-form"
+            method="post">
+            <div class="divStyle"><label for="name">
+                    <input type="text" name="name" id="getName" placeholder="Enter your Name" required>
+                </label></div>
+            <div class="divStyle">
+                <label for="password">
+                    <input type="password" name="password" placeholder="Enter your password" required>
+                </label>
+            </div>
+
+            <div class="divStyle">
+                <button id="login">Log In</button>
+            </div>
+    </div>
+
+    <table border="2" style="margin-top:30vh ;">
+        <tr>
+            <th>Unique Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>cpassword</th>
+        </tr>
+        <tbody id="display"></tbody>
+    </table>
+    <script src="form.js"></script>
+</body>
+
+</html>
